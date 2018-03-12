@@ -1,0 +1,43 @@
+////////////////////
+STEP 1:Get Composer.
+------------
+run all commands one by one
+------------
+1.)
+ 
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ 
+2.)
+ 
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+ 
+3.)
+ 
+php composer-setup.php
+ 
+4.)
+ 
+php -r "unlink('composer-setup.php');"
+ 
+Install Slim:
+------------
+1.)
+ 
+php composer.phar create-project slim/slim-skeleton MySlimProject02
+ 
+(give it time...reach up to "Generating autoload files").
+Wait for new command line.
+Set the version.(make sure which version you want/need(optional)).
+ 
+****drag composer.phar into "MySlimProject02"
+***run gitbash in "MySlimProject02"
+***continue step 2
+2.)
+ 
+php composer.phar require slim/slim "^3.9.1"
+ 
+Install Twig:
+-------------
+1.)
+ 
+composer.phar require "twig/twig:^2.0"
