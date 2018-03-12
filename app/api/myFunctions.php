@@ -5,15 +5,15 @@ use Slim\Http\Response;
 
 include 'Class_Interface.php';
 // Routes
-
+////Say hi....
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
     $name = $args['name'];
     $response->getBody()->write("Hello There!, $name");
     return $response;
 });
-////////////////////
-////////PRODUCT/VEHICLE ROUTES
 ////
+////////PRODUCT routes
+////Display sql entry where name=$args['name'];
 $app->get('/product/vehicle/{name}', function (Request $request, Response $response, array $args) {
     $name_url = $args['name'];
     $db = Database::getInstance();

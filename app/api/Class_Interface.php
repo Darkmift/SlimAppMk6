@@ -4,6 +4,7 @@ include '../src/Classes/Class_Product.php';
 include '../src/Classes/Class_db.php';
 include '../src/Classes/Class_Vehicle.php';
 include '../src/Classes/Class_Product_Factory.php';
+include '../src/Classes/Class_requestLog.php';
 
 //vehicle interface
 interface iVehicle {
@@ -35,3 +36,6 @@ interface iFactory {
 
     public function create($Param_array);
 }
+
+//logs all requests
+(new DumpHTTPRequestToFile)->execute('../logs/dumprequest.txt');
